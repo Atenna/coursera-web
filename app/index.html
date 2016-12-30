@@ -1,19 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="EN" ng-app="foxApp">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <title>Fox App</title>
-    <script src="scripts/angular.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-    <script src="scripts/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <div ng-controller="FoxController">
-      <div ng-repeat="fox in foxes">
-        <img ng-src="{{fox.src}}">
+    <div class="container-class" ng-controller="FoxController">
+      <!-- Header -->
+      <div class="row">
+        <div class="header-class span12 primary-bg">
+          <h4 class="inline-class"><a href="#">Fox App</a></h4>
+          <ul>
+            <li class="inline-class active-{{active}}"><a href="#">Link</a></li>
+            <li class="inline-class"><a href="#">Link</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="row">
+        <div class="content-class span12">
+          <h2 class="secondary">Fox 1</h2>
+          <div class="circle inline-class"></div>
+          <p class="grey-dark">The translations below need to be checked and inserted above into the appropriate translation tables, removing any numbers. Numbers do not necessarily match those in definitions.</p>
+          <a>Click here for more information</a>
+          <h2 class="secondary">Fox 2</h2>
+          <p class="grey-dark">These lists are the most frequent words, when performing a simple, straight (obvious) frequency count of all the books found on Project Gutenberg. The list of books was downloaded in July 2005, and "rsynced" monthly thereafter. These are mostly English words, with some other languages finding representation to a lesser extent.</p>
+          <h3 class="tertiary">Fox</h3>
+          <h4 class="tertiary">Fox</h4>
+          <div class="circle inline-class"></div>
+          <p class="grey-dark">Most common words in TV and movie scripts: Here are frequency lists comparable to the Gutenberg ones, but based on 29,213,800 words from TV and movie scripts and transcripts. Here's a fuller explanation of how the list was generated and its limitations.</p>
+          <div>
+            <div ng-repeat="fox in foxes">
+              <img ng-src="{{fox.src}}" class="inline-class-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+
+      <div class="footer-class span12 tertiary-bg row">
+
       </div>
     </div>
+
+
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/main.js"></script>
   </body>
 </html>
